@@ -14,6 +14,9 @@ namespace verificaLibreria
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
+    //commento aggiunto da Github
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
