@@ -51,7 +51,7 @@ namespace verificaLibreria
                 return;
             }
 
-            biblioteca = new Biblioteca(lblBibNome.Text, lblBibIndirizzo.Text, lblBibApertura.Text, temp1, temp2);
+            biblioteca = new Biblioteca(lblBibNome.Text, lblBibIndirizzo.Text, temp1, temp2);
 
             lblBibNome.IsEnabled = false;
             lblBibIndirizzo.IsEnabled = false;
@@ -117,23 +117,23 @@ namespace verificaLibreria
                 MessageBox.Show("Libro non trovato!");
                 return;
             }
-            MessageBox.Show(libro.toString());
+            MessageBox.Show(libro.ToString());
         }
 
         private void btnCercaAutore_Click(object sender, RoutedEventArgs e)
         {
-            List<Libro> libri = biblioteca.CercaLibridiAutore(lblCercaAutore.Text);
+            List<Libro> libri = biblioteca.CercaLibriDiAutore(lblCercaAutore.Text);
             if (libri.Count == 0)
             {
                 MessageBox.Show("Autore non trovato!");
                 return;
             }
-            foreach(Libro l in libri) MessageBox.Show(l.toString());
+            foreach(Libro l in libri) MessageBox.Show(l.ToString());
         }
 
         private void btnNumeroLibri_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"La biblioteca contiene {biblioteca.NumeroLibri()} libri.");
+            MessageBox.Show($"La biblioteca contiene {biblioteca.numeroLibri()} libri.");
         }
     }
 }

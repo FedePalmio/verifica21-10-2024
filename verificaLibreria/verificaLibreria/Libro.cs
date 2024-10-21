@@ -25,7 +25,7 @@ namespace verificaLibreria
 
         public override string ToString()
         {
-            return $"\"{titolo}\", {autore}, pubblicato nel {annoPubblicazione} da {editore}; {numeroPagine} pagine";
+            return $"\"{titolo}\", {autore}, pubblicato nel {annoPubblicazione} da {editore}; {numeroPagine} pagine; tempo di lettura: {readingTime().TotalHours} ora/e";
         }
 
         public TimeSpan readingTime()
