@@ -9,7 +9,7 @@ namespace verificaLibreria
 {
     internal class Biblioteca
     {
-        public string nome {  get; set; }
+        public string nome { get; set; }
         public string indirizzo { get; set; }
         public TimeOnly orarioApertura { get; set; }
         public TimeOnly orarioChiusura { get; set; }
@@ -29,11 +29,11 @@ namespace verificaLibreria
             libri.Add(new Libro(autore, titolo, annoPubblicazione, editore, numeroPagine));
         }
 
-        public Libro Cerca(string titolo)
+        public Libro CercaLibro(string titolo)
         {
             foreach (Libro libro in libri)
             {
-                if(libro.titolo == titolo)
+                if (libro.titolo == titolo)
                 {
                     return libro;
                 }
@@ -42,6 +42,19 @@ namespace verificaLibreria
             return null;
         }
 
+        public List<Libro> CercaLibriDiAutore(string autore)
+        {
+            List<Libro> result = new();
+            foreach (Libro libro in libri)
+            {
+                if (libro.autore == autore)
+                {
+                    result.Add(libro);
+                }
+            }
+            return result;
+        }
 
+        public int numeroLibri() { return libri.Count; }
     }
 }
