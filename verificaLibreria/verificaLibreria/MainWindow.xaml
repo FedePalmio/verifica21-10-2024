@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:verificaLibreria"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="480" Width="800" ResizeMode="CanMinimize">
     <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="225"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="414" Margin="248,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="224"/>
+
+        <Label Content="Creazione Biblioteca" HorizontalAlignment="Left" Height="31" Margin="27,22,0,0" VerticalAlignment="Top" Width="166" BorderBrush="Black" MinWidth="2" BorderThickness="2,2,2,2"/>
+        <TextBox x:Name="lblBibNome" HorizontalAlignment="Left" Height="21" Margin="27,67,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="192"/>
+        <TextBox x:Name="lblBibIndirizzo" HorizontalAlignment="Left" Height="21" Margin="27,93,0,0" TextWrapping="Wrap" Text="Indirizzo" VerticalAlignment="Top" Width="192"/>
+        <TextBox x:Name="lblBibApertura" HorizontalAlignment="Left" Height="21" Margin="27,119,0,0" TextWrapping="Wrap" Text="Orario Apertura" VerticalAlignment="Top" Width="192"/>
+        <TextBox x:Name="lblBibChiusura" HorizontalAlignment="Left" Height="21" Margin="27,145,0,0" TextWrapping="Wrap" Text="Orario Chiusura" VerticalAlignment="Top" Width="192"/>
+        <Button x:Name="btnCreaBib" Content="Apri Biblioteca" HorizontalAlignment="Left" Height="52" Margin="27,186,0,0" VerticalAlignment="Top" Width="166" FontWeight="Bold" FontSize="20" BorderThickness="2,2,2,2" BorderBrush="Black" Foreground="#FF0B5880" Background="#FF99E0E6" Click="btnCreaBib_Click"/>
+        <Label Content="Creazione Libro" HorizontalAlignment="Left" Height="31" Margin="264,18,0,0" VerticalAlignment="Top" Width="166" BorderBrush="Black" MinWidth="2" BorderThickness="2,2,2,2"/>
+        <TextBox x:Name="lblLibroTitolo" HorizontalAlignment="Left" Height="21" Margin="264,67,0,0" TextWrapping="Wrap" Text="Titolo" VerticalAlignment="Top" Width="192" IsEnabled="False"/>
+        <TextBox x:Name="lblLibroAutore" HorizontalAlignment="Left" Height="21" Margin="264,93,0,0" TextWrapping="Wrap" Text="Autore" VerticalAlignment="Top" Width="192" IsEnabled="False"/>
+        <TextBox x:Name="lblLibroAnno" HorizontalAlignment="Left" Height="21" Margin="264,119,0,0" TextWrapping="Wrap" Text="Anno Pubblicazione" VerticalAlignment="Top" Width="192" IsEnabled="False"/>
+        <TextBox x:Name="lblLibroEditore" HorizontalAlignment="Left" Height="21" Margin="264,145,0,0" TextWrapping="Wrap" Text="Editore" VerticalAlignment="Top" Width="192" IsEnabled="False"/>
+        <TextBox x:Name="lblLibroPagine" HorizontalAlignment="Left" Height="21" Margin="264,171,0,0" TextWrapping="Wrap" Text="Numero Pagine" VerticalAlignment="Top" Width="192" IsEnabled="False"/>
+        <Button x:Name="btnCreaLibro" Content="Aggiungi Libro" HorizontalAlignment="Left" Height="52" Margin="264,212,0,0" VerticalAlignment="Top" Width="166" FontWeight="Bold" FontSize="20" BorderThickness="2,2,2,2" BorderBrush="Black" Foreground="#FF0B804D" Background="#FF9BE699" Click="btnCreaLibro_Click" IsEnabled="False"/>
 
     </Grid>
 </Window>
