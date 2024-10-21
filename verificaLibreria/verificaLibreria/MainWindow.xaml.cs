@@ -48,7 +48,7 @@ namespace verificaLibreria
                 return;
             }
 
-            //biblioteca = new Biblioteca(lblBibNome.Text, lblBibIndirizzo.Text, lblBibApertura.Text, temp1, temp2);
+            biblioteca = new Biblioteca(lblBibNome.Text, lblBibIndirizzo.Text, lblBibApertura.Text, temp1, temp2);
 
             lblBibNome.IsEnabled = false;
             lblBibIndirizzo.IsEnabled = false;
@@ -62,6 +62,12 @@ namespace verificaLibreria
             lblLibroTitolo.IsEnabled = true;
             lblLibroEditore.IsEnabled = true;
             btnCreaLibro.IsEnabled = true;
+
+            lblCercaAutore.IsEnabled = true;
+            btnCercaAutore.IsEnabled = true;
+            lblCercaLibro.IsEnabled = true;
+            btnCercaLibro.IsEnabled = true;
+            btnNumeroLibri.IsEnabled = true;
         }
 
         private void btnCreaLibro_Click(object sender, RoutedEventArgs e)
@@ -96,7 +102,35 @@ namespace verificaLibreria
                 return;
             }
 
-            //biblioteca.AggiungiLibro(lblLibroAutore.Text, lblLibroTitolo.Text, anno, lblLibroEditore.Text, nPagine);
+            biblioteca.AggiungiLibro(lblLibroAutore.Text, lblLibroTitolo.Text, anno, lblLibroEditore.Text, nPagine);
+            MessageBox.Show("Libro aggiunto!");
+        }
+
+        private void btnCercaLibro_Click(object sender, RoutedEventArgs e)
+        {
+            Libro libro = biblioteca.CercaLibro(lblCercaLibro.Text);
+            if(libro == null)
+            {
+                MessageBox.Show("Libro non trovato!");
+                return;
+            }
+            MessageBox.Show(libro.toString());
+        }
+
+        private void btnCercaAutore_Click(object sender, RoutedEventArgs e)
+        {
+            List<Libro> libri = biblioteca.CercaLibridiAutore(lblCercaAutore.Text);
+            if (libri.Count == 0)
+            {
+                MessageBox.Show("Autore non trovato!");
+                return;
+            }
+            foreach(Libro l in libri) MessageBox.Show(l.toString());
+        }
+
+        private void btnNumeroLibri_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"La biblioteca contiene {biblioteca.NumeroLibri()} libri.");
         }
     }
 }
